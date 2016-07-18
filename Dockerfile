@@ -10,4 +10,4 @@ EXPOSE 8888
 USER root
 RUN pip3 install vpython
 RUN pip3 install pycav
-USER pycav
+USER jovyan
