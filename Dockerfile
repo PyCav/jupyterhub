@@ -8,6 +8,7 @@ MAINTAINER jordan <jo357@cam.ac.uk>
 EXPOSE 8888
 
 USER root
+RUN apt-get install ffmpeg
 RUN pip3 install vpython
 RUN pip3 install pycav
 RUN pip3 install nbgrader
