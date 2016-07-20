@@ -19,3 +19,4 @@ RUN chmod  666 /home/jovyan/work/.nbgrader.log
 
 #RUN sh /srv/singleuser/update_usr.sh -h
 CMD ["sh", "/srv/singleuser/update_usr.sh"]
+USER $JPY_USER
