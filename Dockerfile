@@ -15,3 +15,5 @@ RUN pip3 install nbgrader
 RUN nbgrader extension install
 RUN nbgrader extension activate
 USER jovyan
+RUN touch /home/jovyan/work/.nbgrader.log
+RUN chmod  666 /home/jovyan/work/.nbgrader.log
