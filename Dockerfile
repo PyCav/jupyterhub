@@ -15,7 +15,7 @@ RUN pip3 install nbgrader
 RUN nbgrader extension install
 RUN nbgrader extension activate
 ADD update_usr.sh /srv/pycav/update_usr.sh
-RUN sh /srv/pycav/update_usr.sh
+RUN sh /srv/pycav/update_usr.sh -h
 CMD ["sh", "/srv/pycav/update_usr.sh"]
 USER $JPY_USER
 RUN touch /home/jovyan/work/.nbgrader.log
