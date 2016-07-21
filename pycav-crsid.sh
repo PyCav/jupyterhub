@@ -12,7 +12,7 @@ if [ -z "$(getent passwd $JPY_USER)" ]; then
    mkdir /home/$newuser
    chown -R $newuser:$newuser /home/$newuser
 
-   rsync -aPv /home/$olduser/. /home/$newuser/
+   #rsync -aPv /home/$olduser/. /home/$newuser/
    chown -R --from=$olduser $newuser:$newuser /home/$newuser
 
    grep -rlI $olduser /home/$newuser/ . | sudo xargs sed -i 's/$olduser/$newuser/g'
