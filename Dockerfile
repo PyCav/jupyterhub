@@ -17,8 +17,8 @@ RUN pip3 install pycav
 RUN pip3 install nbgrader
 RUN nbgrader extension install
 RUN nbgrader extension activate
-ADD update_usr.sh /srv/pycav/update_usr.sh
-ADD pycav-crsid.sh /srv/pycav/pycav-crsid.sh
+#ADD update_usr.sh /srv/pycav/update_usr.sh
+ADD pycav-start.sh /srv/pycav/pycav-start.sh
 #RUN chmod  666 /home/jovyan/work/.nbgrader.log
 #RUN sh /srv/singleuser/update_usr.sh -h
-CMD ["sh", "/srv/pycav/update_usr.sh","-h"]
+CMD ["sh", "/srv/pycav/pycav-start.sh","-h"]
