@@ -17,17 +17,11 @@ RUN pip3 install pycav
 RUN pip3 install nbgrader
 RUN nbgrader extension install
 RUN nbgrader extension activate
-
-RUN gpg --keyserver ha.pool.sks-keyservers.net --recv-keys B42F6819007F00F88E364FD4036A9C25BF357DD4
-RUN curl -o /usr/local/bin/gosu -SL "https://github.com/tianon/gosu/releases/download/1.4/gosu-$(dpkg --print-architecture)" \
-   && curl -o /usr/local/bin/gosu.asc -SL "https://github.com/tianon/gosu/releases/download/1.4/gosu-$(dpkg --print-architecture).asc" \
-   && gpg --verify /usr/local/bin/gosu.asc \
-   && rm /usr/local/bin/gosu.asc \
-   && chmod +x /usr/local/bin/gosu
+RUN userdel jovyan
 
 ADD pycav-start.sh /srv/pycav/pycav-start.sh
 
-ENTRYPOINT ["/srv/pycav/pycav-start.sh"]
+CMD ["sh", "/srv/pycav/pycav-start.sh"]
 
 
 #ADD update_usr.sh /srv/pycav/update_usr.sh
