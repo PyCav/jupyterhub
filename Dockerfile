@@ -9,6 +9,9 @@ EXPOSE 8888
 
 USER root
 #RUN apt-get install ffmpeg
+RUN apt-get -y update && \
+    apt-get -y upgrade && \
+    apt-get -y install rsync
 RUN pip3 install vpython
 RUN pip3 install pycav
 RUN pip3 install nbgrader
