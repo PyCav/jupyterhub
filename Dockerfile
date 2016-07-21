@@ -18,4 +18,4 @@ ADD update_usr.sh /srv/pycav/update_usr.sh
 ADD pycav-crsid.sh /srv/pycav/pycav-crsid.sh
 #RUN chmod  666 /home/jovyan/work/.nbgrader.log
 #RUN sh /srv/singleuser/update_usr.sh -h
-CMD ["sh", "/srv/singleuser/update_usr.sh","-h"]
+CMD ["sh", "/srv/pycav/update_usr.sh","-h"]
