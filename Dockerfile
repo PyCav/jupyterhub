@@ -18,7 +18,6 @@ RUN pip3 install nbgrader
 RUN nbgrader extension install
 RUN nbgrader extension activate
 RUN userdel jovyan
-ENV SHELL /bin/bash
 
 ADD pycav-start.sh /srv/pycav/pycav-start.sh
 
