@@ -12,6 +12,9 @@ USER root
 RUN apt-get -y update && \
     apt-get -y upgrade && \
     apt-get -y install rsync
+RUN echo "deb http://ftp.debian.org/debian jessie-backports main" >> /etc/apt/sources.list
+RUN apt-get -y update
+RUN apt-get -t jessie-backports  -y install ffmpeg
 RUN pip3 install vpython
 RUN pip3 install pycav
 RUN pip3 install nbgrader
