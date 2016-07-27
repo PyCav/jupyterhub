@@ -21,6 +21,14 @@ RUN pip3 install nbgrader
 RUN nbgrader extension install
 RUN nbgrader extension activate
 RUN userdel jovyan
+
+RUN mkdir read-only && \
+    wget https://raw.githubusercontent.com/ipython-contrib/Jupyter-notebook-extensions/master/src/jupyter_contrib_nbextensions/nbextensions/read-only/main.js && \
+    mv main.js read-only/ && \
+    jupyter nbextensions install read-only && \
+    jupyter nbextensions enable read-only/main && \
+    rm -rf read-only/
+
 ENV SHELL /bin/bash
 
 ADD pycav-start.sh /srv/pycav/pycav-start.sh
