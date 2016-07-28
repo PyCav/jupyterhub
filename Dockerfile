@@ -25,8 +25,8 @@ RUN userdel jovyan
 RUN mkdir read-only && \
     wget https://raw.githubusercontent.com/ipython-contrib/Jupyter-notebook-extensions/master/src/jupyter_contrib_nbextensions/nbextensions/read-only/main.js && \
     mv main.js read-only/ && \
-    jupyter nbextensions install read-only && \
-    jupyter nbextensions enable read-only/main && \
+    jupyter nbextension install read-only && \
+    jupyter nbextension enable read-only/main && \
     rm -rf read-only/
 
 ENV SHELL /bin/bash
