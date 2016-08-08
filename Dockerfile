@@ -18,6 +18,7 @@ RUN apt-get -t jessie-backports  -y install ffmpeg
 RUN pip3 install vpython
 RUN pip3 install pycav
 RUN pip3 install nbgrader
+RUN pip3 install --upgrade ipywidgets
 RUN nbgrader extension install
 RUN nbgrader extension activate
 RUN userdel jovyan
