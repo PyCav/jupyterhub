@@ -4,4 +4,4 @@ Customised version of the jupyterhub/singleuser docker image. Installs vpython, 
 
 ## Installed Libraries
 
-PyCav, Numpy, Scipy, Sympy, Matplotlib, Bokeh, FFmpeg, VPython, ipywidgets and more scientific libraries.
+PyCav, Numpy, Scipy, Sympy, PIL, pandas, Matplotlib, Bokeh, FFmpeg, VPython, ipywidgets and more scientific libraries.
