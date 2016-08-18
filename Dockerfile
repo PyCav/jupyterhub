@@ -2,6 +2,18 @@ FROM jupyterhub/singleuser
 
 MAINTAINER jordan <jo357@cam.ac.uk>
 
+# Build-time metadata as defined at http://label-schema.org
+ARG BUILD_DATE
+ARG VCS_REF
+LABEL org.label-schema.build-date=$BUILD_DATE \
+    org.label-schema.docker.dockerfile="/Dockerfile" \
+    org.label-schema.license="MIT" \
+    org.label-schema.name="PyCav jupyterhub/singleuser Custom Image" \
+    org.label-schema.url="https://pycav.org" \
+    org.label-schema.vcs-ref=$VCS_REF \
+    org.label-schema.vcs-type="Git" \
+    org.label-schema.vcs-url="https://github.com/pycav"
+
 EXPOSE 8888
 
 USER root
