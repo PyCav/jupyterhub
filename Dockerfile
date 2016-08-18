@@ -6,7 +6,7 @@ MAINTAINER jordan <jo357@cam.ac.uk>
 ARG BUILD_DATE
 ARG VCS_REF
 LABEL org.label-schema.build-date=$BUILD_DATE \
-    org.label-schema.docker.dockerfile="/Dockerfile" \
+    org.label-schema.docker.dockerfile="/jupyterhub/Dockerfile" \
     org.label-schema.license="MIT" \
     org.label-schema.name="PyCav jupyterhub/singleuser Custom Image" \
     org.label-schema.url="https://pycav.org" \
