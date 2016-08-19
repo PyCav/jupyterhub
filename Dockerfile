@@ -16,7 +16,7 @@ LABEL org.label-schema.build-date=$BUILD_DATE \
 
 EXPOSE 8888
 
-USER rootINTENTIONALBREAK
+USER root
 RUN apt-get -y update && \
     apt-get -y upgrade
 
